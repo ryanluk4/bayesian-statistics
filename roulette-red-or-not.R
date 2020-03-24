@@ -4,9 +4,9 @@
 # I made slight modifications / cleaned up
 
 # unbuffer the output (ctrl + w)
-# setwd( 'C:/Users/Ryan Luk/Github/bayesian-statistics/roulette-red-or-not' )
+# setwd( 'C:/Users/Ryan Luk/Github/bayesian-statistics' )
 
-#####
+##### Roulette
 
 # 18 red slots on a roulette wheel
 print( population.data.set <- c( rep( 0,20 ), rep( 1,18 ) ) )

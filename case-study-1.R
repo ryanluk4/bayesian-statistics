@@ -4,7 +4,7 @@
 # I made slight modifications / cleaned up
 
 # unbuffer the output (ctrl + w)
-# setwd( 'C:/Users/Ryan Luk/Documents/Github/bayesian-statistics/case-study-1' )
+# setwd( 'C:/Users/Ryan Luk/Documents/Github/bayesian-statistics' )
 
 ##### HIV Study
 
