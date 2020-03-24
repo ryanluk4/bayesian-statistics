@@ -4,7 +4,7 @@
 # I made slight modifications / cleaned up
 
 # unbuffer the output (ctrl + w)
-# setwd( 'C:/Users/Ryan Luk/Desktop/stat 206/roulette-red-or-not' )
+# setwd( 'C:/Users/Ryan Luk/Github/bayesian-statistics/roulette-red-or-not' )
 
 #####
 
