@@ -52,3 +52,37 @@ print( lambda.interval <- c( lambda.hat.mle - qnorm( 0.9995 ) *
 
 # we are 99.9% confident that the population mean length of stay
 # is between about 0.8 days and 3.3 days
+
+# neyman-style frequentist analysis
+print( lambda.hat.neyman <- mean( y ) )
+
+# SE = population SD / sqrt( n ) = sqrt( population variance / n )
+# the variance of poisson( lambda ) = lambda
+print( se.hat.lambda.hat.neyman <- sqrt( lambda.hat.neyman / n ) )
+
+# neyman assumes n = 14 is enough for repeated-sampling to
+# 	follow the CLT
+print( lambda.interval.neyman <- 
+	c( lambda.hat.neyman - qnorm( 0.9995 ) *
+	se.hat.lambda.hat.neyman, lambda.hat.neyman + 
+	qnorm( 0.9995 ) * se.hat.lambda.hat.neyman ) )
+
+# as long as the poisson sampling distribution is correct and the
+# 	CLT applies to a sample size of n = 14, we are 99.9% confident
+
+# the fisher information is the negative second partial derivative
+# 	of the log-likelihood function with respect to lambda,
+#	evaluated at lambda = lambda.hat.mle
+# I.hat( lambda.hat.mle ) = n / lambda.hat.mle
+
+# the repeated sampling variance is given by the inverse of the
+# 	fisher information
+# V.hat( lambda.hat.mle ) = ( I.hat( lambda.hat.mle ) )^( - 1 )
+# 	= lambda.hat.mle / n
+
+# the standard error mle and confidence interval are the same
+print( se.hat.lambda.hat.mle <- sqrt( lambda.hat.mle / n ) )
+print( lambda.interval.mle <- 
+	c( lambda.hat.mle - qnorm( 0.9995 ) *
+	se.hat.lambda.hat.mle, lambda.hat.mle + 
+	qnorm( 0.9995 ) * se.hat.lambda.hat.mle ) )
