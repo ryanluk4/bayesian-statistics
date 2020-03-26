@@ -1,3 +1,13 @@
+# Ryan Luk
+# STAT 206
+# Credit: Prof. David Draper (draper), UCSC 2020
+# I made slight modifications / cleaned up
+
+# unbuffer the output (ctrl + w)
+# setwd( 'C:/Users/Ryan Luk/Github/bayesian-statistics' )
+
+##### Scaled inverse chi-squared density
+
 scaled.inverse.chisq.density <- function( theta, nu, theta.0 ) {
 
 # note that theta plays the role of sigma^2 in this function;
