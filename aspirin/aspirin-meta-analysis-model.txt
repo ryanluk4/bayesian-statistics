@@ -1,0 +1,17 @@
+model {
+
+  mu ~ dunif( -2, 5 )
+  sigma ~ dunif( 0, 6 )
+
+  for ( i in 1:k ) {
+
+    theta[ i ] ~ dnorm( mu, tau.theta )
+    y[ i ] ~ dnorm( theta[ i ], tau.y[ i ] )
+
+  }
+
+  tau.theta <- 1.0 / ( sigma * sigma )
+
+  positive.effect <- step( mu )
+
+}
